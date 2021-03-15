@@ -275,6 +275,26 @@ if(isset($_POST['add']))
     </form>
     <!-- the end of add books -->
 
+    <div class="addAuthorsOrDeleteThem">
+    
+            <div class="addAuthors">
+            
+            <h1 class="authors">AUTHORS : </h1>
+            <select name="authors" id="selectAuthors" >
+                <option >Authors Choice</option>
+                <?php foreach($authors as $au) {?><option ><?php echo $au['name']?></option><?php }?>
+            </select>
+            
+            
+            </div>
+            <div class="deleteAuthors">
+            
+            <button type="submit" name="delete">DELETE</button>
+            
+            
+            
+            </div>
+    </div>
     
     <footer>
       <div class="para">

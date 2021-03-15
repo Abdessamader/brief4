@@ -70,9 +70,10 @@
         
         $id_to_delete = mysqli_real_escape_string($connect,$_POST['Delete']);
 
-        $sql = "DELETE FROM authors WHERE id = $id_to_delete";
+        
+        $sqlBookAuthors = "DELETE FROM authors wHere id_authors = $id_to_delete";
 
-        if(mysqli_query($connect,$sql))
+        if(mysqli_query($connect,$sqlBookAuthors))
         {
             header("location: authors.php");
         }
@@ -80,8 +81,8 @@
         {
             echo "error" . mysqli_error($connect);
         }
-        $sqlBookAuthors = "DELETE FROM booksauthors wHere id = $id_to_delete";
-        mysqli_query($connect,$sqlBookAuthors);
+        
+       
 
     }
     
